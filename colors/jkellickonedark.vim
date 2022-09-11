@@ -163,6 +163,13 @@ call s:h("Todo", s:purple, "", "")
 " }
 
 
+" HTML {
+call s:h("htmlTag", s:blue, "", "")
+call s:h("htmlTagName", s:blue, "", "")
+call s:h("htmlEndTag", s:blue, "", "")
+" }
+
+
 " Plugins {
 " GitGutter
 call s:h("GitGutterAdd", s:green, s:gutter_bg, "")
