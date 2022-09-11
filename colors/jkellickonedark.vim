@@ -23,6 +23,8 @@ let s:purple      = { "gui": "#c678dd", "cterm": "176" }
 let s:cyan        = { "gui": "#56b6c2", "cterm": "73"  }
 let s:white       = { "gui": "#dcdfe4", "cterm": "188" }
 
+let s:light_blue  = { "gui": "#9fc7ea", "cterm": "111" }
+
 let s:fg          = s:white
 let s:bg          = s:black
 
@@ -128,7 +130,7 @@ call s:h("Number", s:yellow, "", "")
 call s:h("Boolean", s:yellow, "", "")
 call s:h("Float", s:yellow, "", "")
 
-call s:h("Identifier", s:white, "", "")
+call s:h("Identifier", s:light_blue, "", "")
 call s:h("Function", s:blue, "", "")
 call s:h("Statement", s:purple, "", "")
 
