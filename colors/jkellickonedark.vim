@@ -27,6 +27,8 @@ let s:light_blue  = { "gui": "#9fc7ea", "cterm": "111" }
 
 let s:fg          = s:white
 let s:bg          = s:black
+let s:bg_light    = { "gui": "#1f2229", "cterm": "236" }
+let s:line_light  = { "gui": "#2d313b", "cterm": "236" }
 
 let s:comment_fg  = { "gui": "#98a0b3", "cterm": "241" }
 let s:gutter_bg   = s:bg
@@ -60,6 +62,9 @@ endfun
 " User interface colors {
 call s:h("Normal", s:fg, s:bg, "")
 
+call s:h("NormalFloat", s:fg, s:bg, "")
+call s:h("FloatBorder", s:non_text, s:bg, "")
+
 call s:h("Cursor", s:bg, s:blue, "")
 call s:h("CursorColumn", "", s:cursor_line, "")
 call s:h("CursorLine", "", s:cursor_line, "")
@@ -72,8 +77,8 @@ call s:h("DiffChange", s:yellow, "", "")
 call s:h("DiffDelete", s:red, "", "")
 call s:h("DiffText", s:blue, "", "")
 
-call s:h("IncSearch", s:bg, s:yellow, "")
-call s:h("Search", s:bg, s:yellow, "")
+call s:h("IncSearch", "", s:selection, "")
+call s:h("Search", "", s:selection, "")
 
 call s:h("ErrorMsg", s:fg, "", "")
 call s:h("ModeMsg", s:fg, "", "")
@@ -81,10 +86,10 @@ call s:h("MoreMsg", s:fg, "", "")
 call s:h("WarningMsg", s:red, "", "")
 call s:h("Question", s:purple, "", "")
 
-call s:h("Pmenu", s:bg, s:fg, "")
-call s:h("PmenuSel", s:fg, s:blue, "")
-call s:h("PmenuSbar", "", s:selection, "")
-call s:h("PmenuThumb", "", s:fg, "")
+call s:h("Pmenu", s:fg, s:bg_light, "")
+call s:h("PmenuSel", s:fg, s:line_light, "")
+call s:h("PmenuSbar", "", s:line_light, "")
+call s:h("PmenuThumb", "", s:comment_fg, "")
 
 call s:h("SpellBad", s:red, "", "")
 call s:h("SpellCap", s:yellow, "", "")
