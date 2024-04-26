@@ -1,20 +1,20 @@
 " ==============================================================================
 "   Name:        jkellick-one-dark
-"   Url:         https://github.com/sonph/onehalf
+"   Url:         https://github.com/jeremiahkellick/jkellick-one-dark-vim
 "   License:     The MIT License (MIT)
 "
-"   Atom One Dark without red variable names
+"   Customized color scheme based on
+"   [One Half Dark](https://github.com/sonph/onehalf)
 " ==============================================================================
 
 set background=dark
 highlight clear
 syntax reset
 
-let g:colors_name="onehalfdark"
-let colors_name="onehalfdark"
+let g:colors_name="jkellickonedark"
+let colors_name="jkellickonedark"
 
-
-let s:black       = { "gui": "#282c34", "cterm": "236" }
+let s:black       = { "gui": "#181a1f", "cterm": "236" }
 let s:red         = { "gui": "#e06c75", "cterm": "168" }
 let s:green       = { "gui": "#98c379", "cterm": "114" }
 let s:yellow      = { "gui": "#e5c07b", "cterm": "180" }
@@ -28,17 +28,16 @@ let s:light_blue  = { "gui": "#9fc7ea", "cterm": "111" }
 let s:fg          = s:white
 let s:bg          = s:black
 
-let s:comment_fg  = { "gui": "#9B9EA4", "cterm": "241" }
-let s:gutter_bg   = { "gui": "#282c34", "cterm": "236" }
-let s:gutter_fg   = { "gui": "#919baa", "cterm": "247" }
-let s:non_text    = { "gui": "#373C45", "cterm": "239" }
+let s:comment_fg  = { "gui": "#98a0b3", "cterm": "241" }
+let s:gutter_bg   = s:bg
+let s:gutter_fg   = s:comment_fg
+let s:non_text    = { "gui": "#2d3038", "cterm": "239" }
 
-let s:cursor_line = { "gui": "#313640", "cterm": "237" }
-let s:color_col   = { "gui": "#313640", "cterm": "237" }
+let s:cursor_line = { "gui": "#252830", "cterm": "237" }
+let s:color_col   = s:cursor_line
 
-let s:selection   = { "gui": "#474e5d", "cterm": "239" }
-let s:vertsplit   = { "gui": "#313640", "cterm": "237" }
-
+let s:selection   = { "gui": "#373c47", "cterm": "239" }
+let s:vertsplit   = s:cursor_line
 
 function! s:h(group, fg, bg, attr)
   if type(a:fg) == type({})
@@ -57,7 +56,6 @@ function! s:h(group, fg, bg, attr)
     exec "hi " . a:group . " gui=NONE cterm=NONE"
   endif
 endfun
-
 
 " User interface colors {
 call s:h("Normal", s:fg, s:bg, "")
@@ -116,7 +114,6 @@ call s:h("Title", s:green, "", "")
 call s:h("WildMenu", s:fg, "", "")
 " }
 
-
 " Syntax colors {
 " Whitespace is defined in Neovim, not Vim.
 " See :help hl-Whitespace and :help hl-SpecialKey
@@ -164,13 +161,11 @@ call s:h("Error", s:red, s:gutter_bg, "")
 call s:h("Todo", s:purple, "", "")
 " }
 
-
 " HTML {
 call s:h("htmlTag", s:blue, "", "")
 call s:h("htmlTagName", s:blue, "", "")
 call s:h("htmlEndTag", s:blue, "", "")
 " }
-
 
 " Plugins {
 " GitGutter
@@ -182,7 +177,6 @@ call s:h("GitGutterChangeDelete", s:red, s:gutter_bg, "")
 call s:h("diffAdded", s:green, "", "")
 call s:h("diffRemoved", s:red, "", "")
 " }
-
 
 " Git {
 call s:h("gitcommitComment", s:comment_fg, "", "")

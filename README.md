@@ -1,11 +1,9 @@
 # jkellick-one-dark-vim
 
-Atom One Dark theme without red variable names for vim
+Customized color scheme based on
+[One Half Dark](https://github.com/sonph/onehalf)
 
 # Vim Installation & Usage
-
-![screenshot: vim](../screenshots/vim.png)
-NeoVim + Tmux with true colors on iTerm2.
 
 ## Installation
 ### Using a plugin manager (recommended)
@@ -66,5 +64,3 @@ set -ga terminal-overrides ",*256col*:Tc"
 
 To test if your neovim/tmux/terminal combination supports true colors or not, use this
 [test script](https://github.com/sonph/dotfiles/blob/master/bin/truecolor.sh):
-
-![truecolors](./truecolors.png)
