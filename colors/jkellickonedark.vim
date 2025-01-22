@@ -11,6 +11,11 @@ set background=dark
 highlight clear
 syntax reset
 
+hi clear @variable
+hi link @variable Identifier
+hi link @type.builtin.c Keyword
+hi link @type.builtin.cpp Keyword
+
 let g:colors_name="jkellickonedark"
 let colors_name="jkellickonedark"
 
